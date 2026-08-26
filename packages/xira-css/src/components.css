@@ -1,0 +1,262 @@
+/* ---- Buttons: rounded-rect by default, pill for primary ---- */
+.x-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  padding: 0.9em 1.5em;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--color-text);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
+  min-height: 44px;
+}
+
+.x-btn:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.x-btn:active {
+  transform: scale(0.98);
+}
+
+.x-btn--primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-ink);
+  border-radius: var(--radius-full);
+}
+
+.x-btn--primary:hover {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+.x-btn--ghost {
+  border-color: transparent;
+  background: transparent;
+}
+
+.x-btn--ghost:hover {
+  background: var(--color-bg-surface);
+  color: var(--color-text);
+}
+
+/* For use inside .x-banner or any accent-colored surface */
+.x-btn--on-accent {
+  background: var(--color-bg-elevated);
+  border-color: var(--color-bg-elevated);
+  color: var(--color-accent);
+}
+
+.x-btn--on-accent:hover {
+  background: transparent;
+  color: var(--color-accent-ink);
+  border-color: var(--color-accent-ink);
+}
+
+/* ---- Banner: full-bleed accent CTA panel ---- */
+.x-banner {
+  background: var(--gradient-accent);
+  color: var(--color-accent-ink);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.x-banner ::selection {
+  background: var(--color-accent-ink);
+  color: var(--color-accent);
+}
+
+/* ---- Card ---- */
+.x-card {
+  background: var(--color-bg-elevated);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  transition: border-color var(--dur-base), box-shadow var(--dur-base);
+}
+
+.x-card--interactive:hover,
+.x-card--interactive:focus-within {
+  border-color: var(--color-text);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Badge / tag: mono, outlined, no pill ---- */
+.x-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.02em;
+  padding: 0.3em 0.65em;
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-muted);
+}
+
+.x-badge--accent {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* ---- Section heading ---- */
+.x-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.x-eyebrow::before {
+  content: '';
+  width: 1.75em;
+  height: 1px;
+  background: currentColor;
+}
+
+.x-heading {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+.x-accent-text {
+  color: var(--color-accent);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ---- Index list (editorial project/work list) ---- */
+.x-index-list {
+  border-top: var(--border-hairline);
+}
+
+.x-index-row {
+  border-bottom: var(--border-hairline);
+}
+
+.x-index-row > summary {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  cursor: pointer;
+}
+
+.x-index-row > summary::-webkit-details-marker {
+  display: none;
+}
+
+.x-index-row > summary:hover .x-index-row__name {
+  color: var(--color-accent);
+}
+
+.x-index-row__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+}
+
+.x-index-row__name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-lg);
+  transition: color var(--dur-fast);
+  flex: 1;
+  min-width: 0;
+}
+
+.x-index-row__domain {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  .x-index-row__domain {
+    display: inline;
+  }
+}
+
+.x-index-row__marker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-md);
+  color: var(--color-text-faint);
+  transition: transform var(--dur-base) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.x-index-row[open] > summary .x-index-row__marker {
+  transform: rotate(45deg);
+}
+
+.x-index-row__body {
+  padding-bottom: var(--space-md);
+  max-width: 56rem;
+}
+
+/* ---- Field ---- */
+.x-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.x-field label {
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.x-field input,
+.x-field textarea {
+  font: inherit;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border-strong);
+  border-radius: 0;
+  padding: var(--space-xs) 0;
+  color: var(--color-text);
+  min-height: 44px;
+  resize: vertical;
+  transition: border-color var(--dur-fast);
+}
+
+.x-field input:focus-visible,
+.x-field textarea:focus-visible {
+  border-color: var(--color-accent);
+  box-shadow: none;
+}
+
+.x-field textarea {
+  min-height: 8rem;
+}
+
+.x-field small[role='alert'] {
+  color: var(--color-danger);
+  font-size: var(--fs-xs);
+}

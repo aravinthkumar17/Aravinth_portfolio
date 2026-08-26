@@ -1,0 +1,24 @@
+/* Design system: layout, components, tokens, and accessible reset all
+   come from the xira-css package (packages/xira-css) — imported here as
+   a real dependency, not loose files. */
+@import 'xira-css';
+
+@import './navpill.css';
+@import './hero.css';
+@import './footer.css';
+@import './content.css';
+
+#root {
+  position: relative;
+}
+
+/* App-specific: keep anchor-scrolled sections clear of the fixed pill nav. */
+html {
+  scroll-padding-top: calc(var(--nav-height) + var(--space-md));
+}
+
+.section-divider {
+  height: 1px;
+  background: var(--color-border);
+  border: 0;
+}

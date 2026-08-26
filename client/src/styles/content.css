@@ -1,0 +1,409 @@
+/**
+ * Component-scoped classes for the content sections (About, Experience,
+ * Xira spotlight, Projects, Skills, Education, Contact). These compose
+ * Xira's tokens and layout primitives but are specific to this portfolio,
+ * so they live in the app rather than the framework package.
+ */
+
+/* ---- Section heading ---- */
+.section-heading {
+  max-width: 42rem;
+}
+
+.section-heading__description {
+  color: var(--color-text-muted);
+}
+
+/* ---- About ---- */
+.about__summary {
+  font-size: var(--fs-md);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: var(--lh-snug);
+}
+
+/* ---- Experience ---- */
+.experience__list {
+  border-left: var(--border-hairline);
+  padding-left: var(--space-lg);
+}
+
+.experience__item {
+  position: relative;
+}
+
+.experience__marker {
+  position: absolute;
+  left: calc(-1 * var(--space-lg) - 4px);
+  top: 0.5em;
+  width: 7px;
+  height: 7px;
+  background: var(--color-border-strong);
+}
+
+.experience__marker--current {
+  background: var(--color-accent);
+}
+
+.experience__header {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.experience__role {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-md);
+}
+
+.experience__meta {
+  color: var(--color-text-muted);
+  margin-top: 0.2em;
+}
+
+.experience__points {
+  margin-top: var(--space-sm);
+}
+
+.experience__point {
+  display: flex;
+  gap: 0.6em;
+  color: var(--color-text-muted);
+}
+
+.experience__point-mark {
+  color: var(--color-accent);
+}
+
+/* ---- Xira spotlight ---- */
+.xira-spotlight {
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.xira-spotlight__heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-2xl);
+  max-width: 18ch;
+}
+
+.xira-spotlight__description {
+  color: var(--color-text-muted);
+  font-size: var(--fs-md);
+  max-width: 60ch;
+}
+
+.xira-spotlight__point {
+  border-top: var(--border-hairline);
+  padding-top: var(--space-sm);
+}
+
+.xira-spotlight__point-num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
+}
+
+.xira-spotlight__point-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  margin-top: 0.4em;
+}
+
+.xira-spotlight__meta {
+  padding-top: var(--space-md);
+  border-top: var(--border-hairline);
+}
+
+.xira-spotlight__kicker {
+  font-size: var(--fs-sm);
+  font-family: var(--font-mono);
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.xira-spotlight__cli {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+}
+
+.xira-spotlight__cli code {
+  color: var(--color-accent);
+}
+
+.xira-spotlight__cli-sep {
+  color: var(--color-text-faint);
+}
+
+/* ---- Projects: accordion rows (controlled, not native <details>) ---- */
+.x-index-row__summary {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  width: 100%;
+  cursor: pointer;
+}
+
+.x-index-row__summary:hover .x-index-row__name {
+  color: var(--color-accent);
+}
+
+.x-index-row__summary:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+.x-index-row--open .x-index-row__marker {
+  transform: rotate(45deg);
+}
+
+.projects__description {
+  color: var(--color-text-muted);
+}
+
+.projects__point {
+  display: flex;
+  gap: 0.5em;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.projects__point-mark {
+  color: var(--color-accent);
+}
+
+.projects__footer {
+  justify-content: space-between;
+}
+
+.projects__link {
+  font-size: var(--fs-sm);
+  color: var(--color-accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---- Skills: interactive category tabs ---- */
+.skills-tabs__list {
+  border-bottom: var(--border-hairline);
+  padding-bottom: var(--space-md);
+}
+
+.skills-tabs__tab {
+  font-size: var(--fs-sm);
+}
+
+.skills-tabs__tab--active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.skills-tabs__tab--active:hover {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.skills-tabs__panel-wrap {
+  min-height: 4.5rem;
+  padding-top: var(--space-lg);
+}
+
+.skills-tabs__badge {
+  font-size: var(--fs-sm);
+  padding: 0.6em 1.15em;
+  gap: 0.5em;
+}
+
+.skill-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+  fill: var(--skill-icon-color, currentColor);
+}
+
+/* ---- Education ---- */
+.education__card-header {
+  justify-content: space-between;
+}
+
+.education__school {
+  font-size: var(--fs-md);
+}
+
+.education__degree {
+  color: var(--color-text-muted);
+}
+
+.education__detail {
+  color: var(--color-text-faint);
+  font-size: var(--fs-sm);
+}
+
+/* ---- Contact: two-column banner on .x-banner ---- */
+#contact .x-banner {
+  background: linear-gradient(to bottom, #ba5c33, #8f4423);
+}
+
+.contact-banner__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.contact-banner__col--form {
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+  padding-left: var(--space-2xl);
+}
+
+.contact-banner__heading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-tight);
+  max-width: 14ch;
+}
+
+.contact-banner__heading em {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+  color: #fbe0c8;
+}
+
+.contact-banner__desc {
+  margin-top: var(--space-sm);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 34ch;
+}
+
+.contact-banner__col > .x-cluster {
+  margin-top: var(--space-md);
+}
+
+.contact-banner__micro {
+  margin-top: var(--space-sm);
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-banner__micro a {
+  color: var(--color-accent-ink);
+  text-decoration: underline;
+}
+
+.contact-banner__facts {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  padding-top: var(--space-md);
+}
+
+.contact-banner__fact {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  font-size: var(--fs-sm);
+}
+
+.contact-banner__fact dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-banner__fact dd {
+  margin: 0;
+  color: var(--color-accent-ink);
+  font-weight: 600;
+  text-align: right;
+}
+
+.contact-banner__form {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-banner__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.contact-banner__form input,
+.contact-banner__form textarea {
+  font: inherit;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-btn);
+  color: var(--color-accent-ink);
+  padding: 0.85em 1em;
+  min-height: 44px;
+  resize: vertical;
+  transition: background var(--dur-fast), border-color var(--dur-fast);
+}
+
+.contact-banner__form textarea {
+  min-height: 6rem;
+}
+
+.contact-banner__form input::placeholder,
+.contact-banner__form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-banner__form input:focus-visible,
+.contact-banner__form textarea:focus-visible {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--color-accent-ink);
+  box-shadow: none;
+}
+
+.contact-banner__form small[role='alert'] {
+  font-size: var(--fs-xs);
+  color: #fff3e0;
+  font-weight: 600;
+}
+
+.contact-banner__submit {
+  align-self: flex-start;
+}
+
+.contact-banner__status {
+  font-size: var(--fs-sm);
+  min-height: 1.5em;
+  color: var(--color-accent-ink);
+  font-weight: 600;
+}
+
+.contact-banner__status[data-status='error'] {
+  color: #fff3e0;
+}
+
+@media (max-width: 56rem) {
+  .contact-banner__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .contact-banner__col--form {
+    border-left: none;
+    padding-left: 0;
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.28);
+  }
+}

@@ -1,0 +1,85 @@
+/**
+ * Xira layout primitives — intrinsic, content-aware layouts.
+ * Intent-based: `x-stack`, `x-cluster`, `x-grid`, `x-sidebar` express what
+ * the layout *should do*, not a wall of utility classes.
+ */
+
+.x-container {
+  width: min(100% - var(--gutter) * 2, var(--content-max));
+  margin-inline: auto;
+}
+
+.x-container--wide {
+  width: min(100% - var(--gutter) * 2, var(--content-wide));
+  margin-inline: auto;
+}
+
+/* Stack: vertical rhythm with a single owned gap */
+.x-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, var(--space-md));
+}
+
+.x-stack--start {
+  align-items: flex-start;
+}
+
+/* Cluster: wrap-aware horizontal grouping (nav, tags, buttons) */
+.x-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cluster-gap, var(--space-xs));
+}
+
+/* Intrinsic grid: fills available tracks, no manual breakpoints needed */
+.x-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-min, 16rem)), 1fr));
+  gap: var(--grid-gap, var(--space-md));
+}
+
+.x-grid--2 {
+  --grid-min: 20rem;
+}
+
+.x-grid--3 {
+  --grid-min: 16rem;
+}
+
+/* Sidebar: content-first two-column that collapses intrinsically */
+.x-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sidebar-gap, var(--space-lg));
+}
+
+.x-sidebar > :first-child {
+  flex-basis: var(--sidebar-width, 20rem);
+  flex-grow: 1;
+}
+
+.x-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 60%;
+}
+
+/* Section rhythm */
+.x-section {
+  padding-block: var(--space-2xl);
+  position: relative;
+}
+
+@media (max-width: 40rem) {
+  .x-section {
+    padding-block: var(--space-xl);
+  }
+}
+
+.x-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

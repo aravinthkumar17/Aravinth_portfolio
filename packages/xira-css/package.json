@@ -1,0 +1,26 @@
+{
+  "name": "xira-css",
+  "version": "1.0.0",
+  "description": "Xira — an intent-based CSS framework with intrinsic responsive layouts, reusable UI components, design tokens, and native-first accessibility, without utility-class proliferation.",
+  "license": "MIT",
+  "author": "Aravinth Kumar V",
+  "style": "src/index.css",
+  "main": "src/index.css",
+  "exports": {
+    ".": "./src/index.css",
+    "./tokens.css": "./src/tokens.css",
+    "./reset.css": "./src/reset.css",
+    "./layout.css": "./src/layout.css",
+    "./components.css": "./src/components.css"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "css",
+    "css-framework",
+    "design-tokens",
+    "accessibility",
+    "intrinsic-design"
+  ]
+}
