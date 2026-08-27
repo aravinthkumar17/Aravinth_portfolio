@@ -1,3 +1,5 @@
+import { profile } from '../data/resume.js';
+
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? '/api';
 
 export async function sendContactMessage(payload) {
@@ -17,5 +19,5 @@ export async function sendContactMessage(payload) {
 }
 
 export function resumeDownloadUrl() {
-  return `${API_BASE}/resume`;
+  return profile.resumeFile;
 }
