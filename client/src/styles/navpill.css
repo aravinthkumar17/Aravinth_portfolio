@@ -197,11 +197,11 @@
   }
 }
 
-@media (max-width: 26rem) {
+/* @media (max-width: 26rem) {
   .nav-pill__role {
     display: none;
   }
-}
+} */
 
 @media (max-width: 30rem) {
   .nav-corner-icons {

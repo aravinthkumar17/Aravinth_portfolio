@@ -247,20 +247,24 @@
   font-size: var(--fs-sm);
 }
 
-/* ---- Contact: two-column banner on .x-banner ---- */
+/* ---- Contact: two-column banner on .x-banner ----
+   Font sizes already ride Xira's fluid --fs-* tokens (clamp()-based); the
+   banner's padding/gap didn't, so they jumped hard at the breakpoint
+   instead of scaling — fixed here with matching clamp()s. */
 #contact .x-banner {
   background: linear-gradient(to bottom, #ba5c33, #8f4423);
+  padding: clamp(1.5rem, 1rem + 5.5vw, 4.5rem);
 }
 
 .contact-banner__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-2xl);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.75rem, 1rem + 3vw, 7rem);
 }
 
 .contact-banner__col--form {
   border-left: 1px solid rgba(255, 255, 255, 0.28);
-  padding-left: var(--space-2xl);
+  padding-left: clamp(1.5rem, 1rem + 3vw, 7rem);
 }
 
 .contact-banner__heading {
@@ -396,14 +400,13 @@
 
 @media (max-width: 56rem) {
   .contact-banner__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .contact-banner__col--form {
     border-left: none;
     padding-left: 0;
-    padding-top: var(--space-xl);
+    padding-top: clamp(1.5rem, 1rem + 3vw, 7rem);
     border-top: 1px solid rgba(255, 255, 255, 0.28);
   }
 }

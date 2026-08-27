@@ -168,4 +168,11 @@
     margin-inline: auto;
     width: 100%;
   }
+
+  .hero-visual__badge {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: 6rem;
+    height: 6rem;
+  }
 }

@@ -17,6 +17,13 @@ html {
   scroll-padding-top: calc(var(--nav-height) + var(--space-md));
 }
 
+/* Guard against transform/animation bounding boxes (e.g. the rotating
+   hero badge) nudging the page into horizontal scroll on narrow viewports. */
+html,
+body {
+  overflow-x: hidden;
+}
+
 .section-divider {
   height: 1px;
   background: var(--color-border);
