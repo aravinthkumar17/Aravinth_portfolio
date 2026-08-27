@@ -12,7 +12,7 @@ export const profile = {
 
 export const stats = [
   { label: 'Years of experience', value: '1.8+' },
-  { label: 'Client projects shipped', value: '9' },
+  { label: 'Client projects shipped', value: '8' },
   { label: 'Automated Xira tests', value: '900+' },
   { label: 'CSS payload reduction', value: '77.2%' },
 ];
@@ -158,7 +158,7 @@ export const projects = [
 
 export const skills = {
   Languages: ['HTML5', 'CSS3', 'JavaScript'],
-  'Frameworks & Libraries': ['React.js', 'Bootstrap 5', 'Tailwind CSS 4', 'Xira CSS'],
+  'Frameworks & Libraries': ['React.js', 'Bootstrap 5', 'Tailwind CSS 4', 'Xira CSS','Gsap','Aos','Swiper.js'],
   'Version Control': ['Git', 'GitHub'],
   'Design Tools': ['Figma'],
   'CMS Tools': ['WordPress', 'phpMyAdmin'],

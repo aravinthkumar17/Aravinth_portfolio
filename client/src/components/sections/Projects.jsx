@@ -16,7 +16,7 @@ export default function Projects() {
         <SectionHeading
           id="projects-heading"
           eyebrow="04 — Selected work"
-          title="Nine domains, one shipped standard"
+          title="Eight domains, one shipped standard"
           description="From accessibility-first nonprofits to a Dubai tech company and an international motorcycle racer — expand a row for details."
         />
 
