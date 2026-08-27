@@ -4,6 +4,10 @@ export default function SkillIcon({ name }) {
   const icon = skillIcons[name];
   if (!icon) return null;
 
+  if (icon.img) {
+    return <img src={icon.img} alt="" className="skill-icon skill-icon--raster" />;
+  }
+
   return (
     <svg
       className="skill-icon"

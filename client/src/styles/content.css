@@ -229,6 +229,11 @@
   fill: var(--skill-icon-color, currentColor);
 }
 
+.skill-icon--raster {
+  width: auto;
+  height: 1.3em;
+}
+
 /* ---- Education ---- */
 .education__card-header {
   justify-content: space-between;
