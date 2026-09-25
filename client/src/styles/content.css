@@ -234,6 +234,51 @@
   height: 1.3em;
 }
 
+/* Phones: one swipeable row of compact pills instead of a wrapped grid */
+@media (max-width: 40rem) {
+  .skills-tabs__list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    gap: 0.5rem;
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    scroll-padding-inline: 1rem;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 1rem, #000 calc(100% - 2rem), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 1rem, #000 calc(100% - 2rem), transparent);
+  }
+
+  .skills-tabs__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .skills-tabs__tab {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    white-space: nowrap;
+    padding: 0.55em 1em;
+    border: var(--border-hairline);
+    border-radius: 999px;
+  }
+
+  .skills-tabs__tab--active {
+    border-color: var(--color-accent);
+  }
+
+  .skills-tabs__panel-wrap {
+    padding-top: var(--space-md);
+  }
+
+  .skills-tabs__panel {
+    gap: 0.5rem;
+  }
+
+  .skills-tabs__badge {
+    padding: 0.5em 0.9em;
+  }
+}
+
 /* ---- Education ---- */
 .education__card-header {
   justify-content: space-between;

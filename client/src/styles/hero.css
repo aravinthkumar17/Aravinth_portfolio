@@ -11,13 +11,13 @@
 }
 
 .hero__headline {
-  font-size: var(--fs-3xl);
+  font-size: clamp(2.25rem, 1.6rem + 3vw, 3.75rem);
   line-height: var(--lh-tight);
-  max-width: 16ch;
+  max-width: 18ch;
 }
 
 .hero__lead {
-  font-size: var(--fs-md);
+  font-size: var(--fs-base);
   color: var(--color-text-muted);
   max-width: 46ch;
 }

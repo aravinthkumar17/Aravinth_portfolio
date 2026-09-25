@@ -17,7 +17,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              Anyone can ship a screen. I build ones that <span className="x-accent-text">feel inevitable.</span>
+              Hi, I'm Aravinth — I build fast, accessible web apps, <span className="x-accent-text">front to back.</span>
             </motion.h1>
 
             <motion.p

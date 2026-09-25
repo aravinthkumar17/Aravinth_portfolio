@@ -1,18 +1,18 @@
 export const profile = {
   name: 'Aravinth Kumar V',
   role: 'Junior Software Developer',
-  tagline: 'Front-end craftsman building responsive, accessible, story-driven web interfaces — creator of the Xira CSS Framework.',
+  tagline: 'Junior Software Developer crafting responsive React interfaces and MERN-stack apps — creator of the Xira CSS Framework.',
   phone: '+91 6374757014',
   email: 'aravindhezekiel17@gmail.com',
   location: 'Chennai, Tamil Nadu, India',
   summary:
-    "Junior Software Developer with 1.8+ years of professional experience building responsive, accessible, and modern web interfaces using HTML5, CSS3, JavaScript, Bootstrap 5, Tailwind CSS 4, Figma and React.js. Experienced across education, accessibility, corporate, entertainment, and sports domains. Creator of Xira CSS Framework, an intent-based CSS framework featuring intrinsic responsive layouts, reusable UI components, design tokens, selective CSS compilation, and native-first accessibility.",
+    "Junior Software Developer with 2+ years of professional experience building responsive, accessible, and modern web interfaces using HTML5, CSS3, JavaScript, Bootstrap 5, Tailwind CSS 4, Figma and React.js. Experienced across education, accessibility, corporate, entertainment, and sports domains. Creator of Xira CSS Framework, an intent-based CSS framework featuring intrinsic responsive layouts, reusable UI components, design tokens, selective CSS compilation, and native-first accessibility.",
   resumeFile: '/resume.pdf',
 };
 
 export const stats = [
-  { label: 'Years of experience', value: '1.8+' },
-  { label: 'Client projects shipped', value: '8' },
+  { label: 'Years of experience', value: '2+' },
+  { label: 'Client projects shipped', value: '8+' },
   { label: 'Automated Xira tests', value: '900+' },
   { label: 'CSS payload reduction', value: '77.2%' },
 ];
@@ -33,6 +33,38 @@ export const experience = [
       'Implement interactive web components, forms, navigation, animations, and responsive layouts based on project requirements.',
       'Work on multiple client projects across education, accessibility, corporate, entertainment, and sports domains.',
       'Contribute to accessibility-focused web development by implementing semantic HTML and user-friendly interfaces for diverse users.',
+    ],
+  },
+  {
+    id: 'skifter-technology',
+    company: 'Skifter Technology',
+    role: 'MERN Stack Developer Intern',
+    location: 'Chennai, Tamil Nadu',
+    start: 'Apr 2024',
+    end: 'Nov 2024',
+    current: false,
+    points: [
+      'Develop full-stack web applications using MongoDB, Express.js, React.js, and Node.js.',
+      'Build responsive and reusable React.js components and integrate RESTful APIs for dynamic web applications.',
+      'Develop backend APIs using Node.js and Express.js with MongoDB for data storage and management.',
+      'Implement CRUD operations, form validation, authentication, and frontend-backend integration.',
+      'Collaborate with the development team to debug issues, improve application functionality, and deliver project requirements.',
+    ],
+  },
+  {
+    id: 'novi-tech',
+    company: 'Novi Tech',
+    role: 'MERN Stack Developer Intern',
+    location: 'Coimbatore, Tamil Nadu',
+    start: 'Oct 2023',
+    end: 'Mar 2024',
+    current: false,
+    points: [
+      'Develop web applications using the MERN stack, including MongoDB, Express.js, React.js, and Node.js.',
+      'Create responsive user interfaces using React.js, JavaScript, HTML5, CSS3, and modern UI practices.',
+      'Integrate frontend applications with REST APIs and implement dynamic data-driven features.',
+      'Work with MongoDB for database operations, including creating, retrieving, updating, and managing application data.',
+      'Participate in debugging, testing, and improving application performance and user experience.',
     ],
   },
 ];
@@ -118,6 +150,18 @@ export const projects = [
     ],
   },
   {
+    id: 'puthri',
+    name: 'Project Puthri',
+    tags: ['WordPress', 'HTML5', 'CSS3', 'JavaScript'],
+    domain: 'Corporate',
+    url: 'https://www.puthri.org',
+    description: 'Organizational website developed and maintained on WordPress with custom responsive layouts.',
+    points: [
+      'Customized responsive page layouts, content sections, and user interface components based on project requirements.',
+      'Implemented front-end enhancements and supported ongoing website content and page updates.',
+    ],
+  },
+  {
     id: 'smvrch',
     name: 'Sir Mutha Venkatasubba Rao Concert Hall (SMVRCH)',
     tags: ['HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript'],
@@ -127,6 +171,20 @@ export const projects = [
     points: [
       'Created modern and responsive layouts using Tailwind CSS with reusable UI components.',
       'Implemented responsive navigation, content sections, interactive elements, and visually engaging web interfaces.',
+    ],
+  },
+  {
+    id: 'Redbox Mobile',
+    name: 'RedBox – Mobile E-Commerce Platform',
+    tags: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
+    domain: 'Entertainment',
+    url: 'https://redbox-ruddy.vercel.app/',
+    description: 'Developed a full-stack e-commerce platform for selling new and second-hand mobile phones, mobile accessories, and repair services.',
+    points: [
+      'Built responsive and reusable user interfaces using React.js, JavaScript, HTML5, CSS3, and modern UI practices',
+      'Developed Node.js and Express.js with MongoDB for product, customer, order, and service management',
+      'Implemented product browsing, product details, shopping cart, checkout, order tracking, and mobile service features',
+      ' Developed an admin panel for managing products, categories, product images, orders, and inventory.',
     ],
   },
   {
@@ -146,7 +204,7 @@ export const projects = [
     name: 'Kavin Quintal — International Motorcycle Racer Website',
     tags: ['React.js', 'Tailwind CSS 4', 'JavaScript'],
     domain: 'Sports',
-    url: 'https://stage.kavinquintal.com',
+    url: 'https://kavinquintal.com',
     description: 'Personal website for an international motorcycle racer, presenting career journey and achievements.',
     points: [
       'Built reusable and responsive UI components using React.js and Tailwind CSS 4.',
@@ -158,10 +216,11 @@ export const projects = [
 
 export const skills = {
   Languages: ['HTML5', 'CSS3', 'JavaScript'],
-  'Frameworks & Libraries': ['React.js', 'Bootstrap 5', 'Tailwind CSS 4', 'Xira CSS','Gsap','Aos','Swiper.js'],
+  Frontend: ['React.js', 'Bootstrap 5', 'Tailwind CSS 4', 'Xira CSS', 'GSAP', 'AOS', 'Swiper.js'],
+  Backend: ['Node.js', 'Express.js', 'REST APIs'],
+  Database: ['MongoDB', 'phpMyAdmin'],
   'Version Control': ['Git', 'GitHub'],
-  'Design Tools': ['Figma'],
-  'CMS Tools': ['WordPress', 'phpMyAdmin'],
+  'Design & Tools': ['Figma', 'WordPress'],
   'Web Development': ['Responsive Web Design', 'Front-End Development', 'UI Development', 'Accessibility'],
 };
 

@@ -11,11 +11,23 @@ export default function Skills() {
   const [active, setActive] = useState(0);
   const tabsId = useId();
   const tabRefs = useRef([]);
+  const listRef = useRef(null);
   const prefersReduced = useReducedMotion();
 
-  const focusTab = (index) => {
+  const selectTab = (index) => {
     setActive(index);
-    tabRefs.current[index]?.focus();
+    // Pin the chosen tab to the start of the strip so the following tabs stay in view
+    const list = listRef.current;
+    const tab = tabRefs.current[index];
+    if (!list || !tab || list.scrollWidth <= list.clientWidth) return;
+    const pad = parseFloat(getComputedStyle(list).paddingLeft) || 0;
+    const offset = tab.getBoundingClientRect().left - list.getBoundingClientRect().left - pad;
+    list.scrollBy({ left: offset, behavior: prefersReduced ? 'auto' : 'smooth' });
+  };
+
+  const focusTab = (index) => {
+    selectTab(index);
+    tabRefs.current[index]?.focus({ preventScroll: true });
   };
 
   const handleKeyDown = (e, index) => {
@@ -34,7 +46,7 @@ export default function Skills() {
         <SectionHeading id="skills-heading" eyebrow="05 — Toolbox" title="Skills & tools" />
 
         <Reveal as="div" className="skills-tabs">
-          <div className="x-cluster skills-tabs__list" role="tablist" aria-label="Skill categories">
+          <div ref={listRef} className="x-cluster skills-tabs__list" role="tablist" aria-label="Skill categories">
             {categories.map(([category], i) => (
               <button
                 key={category}
@@ -46,7 +58,7 @@ export default function Skills() {
                 aria-controls={`${tabsId}-panel-${i}`}
                 tabIndex={active === i ? 0 : -1}
                 className={`x-btn skills-tabs__tab ${active === i ? 'skills-tabs__tab--active' : 'x-btn--ghost'}`}
-                onClick={() => setActive(i)}
+                onClick={() => selectTab(i)}
                 onKeyDown={(e) => handleKeyDown(e, i)}
               >
                 {category}
