@@ -40,7 +40,7 @@ export const experience = [
     company: 'Skifter Technology',
     role: 'MERN Stack Developer Intern',
     location: 'Chennai, Tamil Nadu',
-    start: 'Apr 2024',
+    start: 'Dec 2023',
     end: 'Nov 2024',
     current: false,
     points: [
@@ -51,22 +51,7 @@ export const experience = [
       'Collaborate with the development team to debug issues, improve application functionality, and deliver project requirements.',
     ],
   },
-  {
-    id: 'novi-tech',
-    company: 'Novi Tech',
-    role: 'MERN Stack Developer Intern',
-    location: 'Coimbatore, Tamil Nadu',
-    start: 'Oct 2023',
-    end: 'Mar 2024',
-    current: false,
-    points: [
-      'Develop web applications using the MERN stack, including MongoDB, Express.js, React.js, and Node.js.',
-      'Create responsive user interfaces using React.js, JavaScript, HTML5, CSS3, and modern UI practices.',
-      'Integrate frontend applications with REST APIs and implement dynamic data-driven features.',
-      'Work with MongoDB for database operations, including creating, retrieving, updating, and managing application data.',
-      'Participate in debugging, testing, and improving application performance and user experience.',
-    ],
-  },
+  
 ];
 
 export const xira = {
