@@ -6,7 +6,7 @@ export const profile = {
   email: 'aravindhezekiel17@gmail.com',
   location: 'Chennai, Tamil Nadu, India',
   summary:
-    "Software Developer with 4+ years of professional experience building responsive, accessible, and modern web interfaces using HTML5, CSS3, JavaScript, Bootstrap 5, Tailwind CSS 4, Figma and React.js. Experienced across education, accessibility, corporate, entertainment, and sports domains. Creator of Xira CSS Framework, an intent-based CSS framework featuring intrinsic responsive layouts, reusable UI components, design tokens, selective CSS compilation, and native-first accessibility.",
+    "Software Developer with 4+ years of professional experience building responsive, accessible, and modern web interfaces using HTML5, CSS3, JavaScript, Wordpress, Bootstrap 5, Tailwind CSS 4, Figma and React.js. Experienced across education, accessibility, corporate, entertainment, and sports domains. Creator of Xira CSS Framework, an intent-based CSS framework featuring intrinsic responsive layouts, reusable UI components, design tokens, selective CSS compilation, and native-first accessibility.",
   resumeFile: '/resume.pdf',
 };
 
@@ -27,7 +27,7 @@ export const experience = [
     end: 'Sep 2026',
     current: true,
     points: [
-      'Develop responsive and modern web interfaces using HTML5, CSS3, JavaScript, Bootstrap 5, Tailwind CSS, and React.js.',
+      'Develop responsive and modern web interfaces using HTML5, CSS3, JavaScript, Wordpress, Bootstrap 5, Tailwind CSS, and React.js.',
       'Build reusable UI components and responsive layouts while maintaining consistency across desktop, tablet, and mobile devices.',
       'Collaborate with design and development teams to translate project requirements into functional, user-friendly web interfaces.',
       'Implement interactive web components, forms, navigation, animations, and responsive layouts based on project requirements.',
@@ -38,13 +38,13 @@ export const experience = [
   {
     id: 'skifter-technology',
     company: 'Skifter Technology',
-    role: 'MERN Stack Developer Intern',
+    role: 'MERN Stack Developer',
     location: 'Chennai, Tamil Nadu',
     start: 'Dec 2023',
     end: 'Nov 2024',
     current: false,
     points: [
-      'Develop full-stack web applications using MongoDB, Express.js, React.js, and Node.js.',
+      'Develop full-stack web applications using Wordpress, MongoDB, Express.js, React.js, and Node.js.',
       'Build responsive and reusable React.js components and integrate RESTful APIs for dynamic web applications.',
       'Develop backend APIs using Node.js and Express.js with MongoDB for data storage and management.',
       'Implement CRUD operations, form validation, authentication, and frontend-backend integration.',
@@ -216,7 +216,7 @@ export const projects = [
 
 export const skills = {
   'E-Commerce Development': ['WooCommerce, Shopify, E-Commerce Development, Product Management, Order Management'],
-  Frontend: ['React.js', 'Bootstrap 5', 'Tailwind CSS 4', 'Xira CSS', 'GSAP', 'AOS', 'Swiper.js'],
+  Frontend: ['Html', 'Css', 'JavaScript', 'React.js', 'Bootstrap 5', 'Tailwind CSS 4', 'Xira CSS', 'GSAP', 'AOS', 'Swiper.js'],
   Backend: ['Node.js', 'Express.js', 'REST APIs'],
   Database: ['MongoDB', 'phpMyAdmin'],
   'Version Control': ['Git', 'GitHub'],
