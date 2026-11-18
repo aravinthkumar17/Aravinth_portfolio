@@ -1,12 +1,12 @@
 export const profile = {
   name: 'Aravinth Kumar V',
-  role: 'Junior Software Developer',
-  tagline: 'Junior Software Developer crafting responsive React interfaces and MERN-stack apps — creator of the Xira CSS Framework.',
+  role: 'Software Developer',
+  tagline: 'Software Developer crafting responsive React interfaces and MERN-stack apps — creator of the Xira CSS Framework.',
   phone: '+91 6374757014',
   email: 'aravindhezekiel17@gmail.com',
   location: 'Chennai, Tamil Nadu, India',
   summary:
-    "Junior Software Developer with 2+ years of professional experience building responsive, accessible, and modern web interfaces using HTML5, CSS3, JavaScript, Bootstrap 5, Tailwind CSS 4, Figma and React.js. Experienced across education, accessibility, corporate, entertainment, and sports domains. Creator of Xira CSS Framework, an intent-based CSS framework featuring intrinsic responsive layouts, reusable UI components, design tokens, selective CSS compilation, and native-first accessibility.",
+    "Software Developer with 4+ years of professional experience building responsive, accessible, and modern web interfaces using HTML5, CSS3, JavaScript, Bootstrap 5, Tailwind CSS 4, Figma and React.js. Experienced across education, accessibility, corporate, entertainment, and sports domains. Creator of Xira CSS Framework, an intent-based CSS framework featuring intrinsic responsive layouts, reusable UI components, design tokens, selective CSS compilation, and native-first accessibility.",
   resumeFile: '/resume.pdf',
 };
 
@@ -21,7 +21,7 @@ export const experience = [
   {
     id: 'mvg-digital',
     company: 'MVG Digital Private Limited',
-    role: 'Junior Software Developer',
+    role: 'Software Developer',
     location: 'Chennai, Tamil Nadu',
     start: 'Jan 2025',
     end: 'Sep 2026',
@@ -51,7 +51,22 @@ export const experience = [
       'Collaborate with the development team to debug issues, improve application functionality, and deliver project requirements.',
     ],
   },
-  
+    {
+    id: 'Novi Tech',
+    company: 'Novi Tech',
+    role: 'Software Engineer, Full Stack Developer ',
+    location: 'Coimbatore, Tamil Nadu',
+    start: 'July 2022',
+    end: 'Nov 2023',
+    current: false,
+    points: [
+      'Develop full-stack web applications using MongoDB, Express.js, React.js, and Node.js.',
+      'Build responsive and reusable React.js components and integrate RESTful APIs for dynamic web applications.',
+      'Develop backend APIs using Node.js and Express.js with MongoDB for data storage and management.',
+      'Implement CRUD operations, form validation, authentication, and frontend-backend integration.',
+      'Collaborate with the development team to debug issues, improve application functionality, and deliver project requirements.',
+    ],
+  },
 ];
 
 export const xira = {
