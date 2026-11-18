@@ -217,7 +217,7 @@ export const projects = [
 export const skills = {
   'E-Commerce Development': ['WooCommerce, Shopify, E-Commerce Development, Product Management, Order Management'],
   Frontend: ['Html', 'Css', 'JavaScript', 'React.js', 'Bootstrap 5', 'Tailwind CSS 4', 'Xira CSS', 'GSAP', 'AOS', 'Swiper.js'],
-  Backend: ['Node.js', 'Express.js', 'REST APIs'],
+  Backend: ['Node.js', 'Express.js', 'Php', 'REST APIs'],
   Database: ['MongoDB', 'phpMyAdmin'],
   'Version Control': ['Git', 'GitHub'],
   'Design & Tools': ['Figma', 'WordPress'],
