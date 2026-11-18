@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section id="about" className="x-section" aria-labelledby="about-heading">
       <div className="x-container--wide x-stack" style={{ '--stack-gap': 'var(--space-lg)' }}>
-        <SectionHeading id="about-heading" eyebrow="01 — About" title="Front-end developer, systems thinker" />
+        <SectionHeading id="about-heading" eyebrow="01 — About" title="Software developer, systems thinker" />
         <Reveal delay={0.1} className="x-stack" style={{ '--stack-gap': 'var(--space-md)' }}>
           <p className="about__summary">{profile.summary}</p>
           <div className="x-cluster">

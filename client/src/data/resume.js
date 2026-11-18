@@ -11,7 +11,7 @@ export const profile = {
 };
 
 export const stats = [
-  { label: 'Years of experience', value: '2+' },
+  { label: 'Years of experience', value: '4+' },
   { label: 'Client projects shipped', value: '8+' },
   { label: 'Automated Xira tests', value: '900+' },
   { label: 'CSS payload reduction', value: '77.2%' },
@@ -200,7 +200,7 @@ export const projects = [
 ];
 
 export const skills = {
-  Languages: ['HTML5', 'CSS3', 'JavaScript'],
+  'E-Commerce Development': ['WooCommerce, Shopify, E-Commerce Development, Product Management, Order Management'],
   Frontend: ['React.js', 'Bootstrap 5', 'Tailwind CSS 4', 'Xira CSS', 'GSAP', 'AOS', 'Swiper.js'],
   Backend: ['Node.js', 'Express.js', 'REST APIs'],
   Database: ['MongoDB', 'phpMyAdmin'],

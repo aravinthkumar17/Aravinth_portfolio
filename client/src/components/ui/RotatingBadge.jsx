@@ -11,7 +11,7 @@ export default function RotatingBadge() {
         </defs>
         <text fontSize="7.4" letterSpacing="2">
           <textPath href={`#${pathId}`} startOffset="0%">
-            FRONT-END DEVELOPER • FRONT-END DEVELOPER •
+            FORWARD DEPLOY ENGINEER • FORWARD DEPLOY ENGINEER •
           </textPath>
         </text>
       </svg>
